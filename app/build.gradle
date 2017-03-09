@@ -1,5 +1,17 @@
 apply plugin: 'com.android.application'
 
+//Gets the translations using twine
+task generateStrings {
+    String script = 'twine generate-string-file ./src/main/res/demoStrings/demo.ini ./src/main/res/values-es/strings.xml --lang es;' +
+                    'twine generate-string-file ./src/main/res/demoStrings/demo.ini ./src/main/res/values-fr/strings.xml --lang fr;' +
+                    'twine generate-string-file ./src/main/res/demoStrings/demo.ini ./src/main/res/values-jp/strings.xml --lang jp;' +
+                    'twine generate-string-file ./src/main/res/demoStrings/demo.ini ./src/main/res/values/strings.xml;'
+    exec {
+        executable "sh"
+        args '-c', script
+    }
+}
+
 android {
     compileSdkVersion 25
     buildToolsVersion "25.0.2"

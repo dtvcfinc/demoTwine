@@ -1,0 +1,3 @@
+[submodule "app/src/main/res/demoStrings"]
+	path = app/src/main/res/demoStrings
+	url = https://github.com/dtvcfinc/demoStrings.git
