@@ -2,10 +2,7 @@ apply plugin: 'com.android.application'
 
 //Gets the translations using twine
 task generateStrings {
-    String script = 'twine generate-localization-file ../demoStrings/demo.ini ./src/main/res/values-es/strings.xml --lang es;' +
-                    'twine generate-localization-file ../demoStrings/demo.ini ./src/main/res/values-fr/strings.xml --lang fr;' +
-                    'twine generate-localization-file ../demoStrings/demo.ini ./src/main/res/values-jp/strings.xml --lang jp;' +
-                    'twine generate-localization-file ../demoStrings/demo.ini ./src/main/res/values/strings.xml;'
+    String script = 'sh ../getTranslations.sh'
     exec {
         executable "sh"
         args '-c', script
