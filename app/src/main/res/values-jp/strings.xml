@@ -5,18 +5,19 @@
 <resources>
 	<!-- SECTION: Android -->
 	<string name="app_name">Demo twine.</string>
-	<string name="demo">This is a demo</string>
-	<string name="new_string">Demo twine.</string>
+	<string name="this_is_a_new_string">This is a new string.</string>
+	<string name="demo">これはデモ</string>
+	<string name="new_string">デモツイン。</string>
 
 	<!-- SECTION: General -->
-	<string name="yes">Yes</string>
-	<string name="no">No</string>
+	<string name="yes">はい</string>
+	<string name="no">いいえ</string>
 
 	<!-- SECTION: Errors -->
 	<!-- An error describing when a path on the filesystem could not be found. -->
-	<string name="path_not_found_error">The file \'%s\' could not be found.</string>
+	<string name="path_not_found_error">ファイル \'％\@\'は見つかりませんでした。</string>
 	<!-- An error describing when the device can not connect to the internet. -->
-	<string name="network_unavailable_error">The network is currently unavailable.</string>
+	<string name="network_unavailable_error">ネットワークは現在利用できません。</string>
 	<string name="dismiss_error">Yes</string>
 
 	<!-- SECTION: Escaping Example -->

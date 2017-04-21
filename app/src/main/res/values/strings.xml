@@ -5,6 +5,7 @@
 <resources>
 	<!-- SECTION: Android -->
 	<string name="app_name">Demo twine.</string>
+	<string name="this_is_a_new_string">This is a new string.</string>
 	<string name="demo">This is a demo</string>
 	<string name="new_string">Demo twine.</string>
 
