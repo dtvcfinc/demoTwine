@@ -1,6 +1,6 @@
-#DemoTwine
+# DemoTwine
 
-The strings of this project are in a submodule in the following repository: https://github.com/dtvcfinc/demoStrings.
+Sample project to share strings between Android and iOS and automate string generation. The strings of this project are in a submodule in the following repository: https://github.com/dtvcfinc/demoStrings.
 
 # How to set up
 
