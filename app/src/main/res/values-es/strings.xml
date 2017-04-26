@@ -17,7 +17,7 @@
 	<!-- An error describing when a path on the filesystem could not be found. -->
 	<string name="path_not_found_error">No se encontró el archivo \'%s\'.</string>
 	<!-- An error describing when the device can not connect to the internet. -->
-	<string name="network_unavailable_error">La red no está disponible.</string>
+	<string name="network_unavailable_error">La red no está disponible o tal vez si.</string>
 	<string name="dismiss_error">Si</string>
 
 	<!-- SECTION: Escaping Example -->
