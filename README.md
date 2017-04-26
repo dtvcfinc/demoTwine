@@ -13,8 +13,9 @@ Clone this repository.
 	$ git clone https://github.com/dtvcfinc/demoTwine.git
   
 Init submodule and update:
-  $ git submodule init
-  $ git submodule update
+
+    $ git submodule init
+    $ git submodule update
   
 Generate a new .po translation.
 
