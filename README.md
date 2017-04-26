@@ -14,6 +14,7 @@ Clone this repository.
   
 Init submodule and update:
 
+    $ cd demoTwine
     $ git submodule init
     $ git submodule update
   
