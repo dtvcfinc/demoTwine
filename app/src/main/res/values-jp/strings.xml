@@ -8,6 +8,7 @@
 	<string name="this_is_a_new_string">This is a new string.</string>
 	<string name="demo">これはデモ</string>
 	<string name="new_string">デモツイン。</string>
+	<string name="new_string_b">Demo twine.</string>
 
 	<!-- SECTION: General -->
 	<string name="yes">はい</string>
