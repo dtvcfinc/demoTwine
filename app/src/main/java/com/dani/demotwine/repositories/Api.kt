@@ -1,4 +1,4 @@
-package com.dani.demotwine
+package com.dani.demotwine.repositories
 
 import com.dani.demotwine.response_objects.Repositories
 import retrofit2.http.GET

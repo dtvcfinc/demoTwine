@@ -1,11 +1,11 @@
 package com.dani.demotwine.repositories
 
-import com.dani.demotwine.Api
+import com.dani.demotwine.R.id.stars
 import com.dani.demotwine.models.Repository
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
-import rx.Observable
+import rx.Single
 import rx.schedulers.Schedulers
 
 /**
@@ -21,19 +21,20 @@ object GitHub {
         retrofit.create(Api::class.java)
     }
 
-    fun getRepos(): Observable<List<Repository>> {
+    fun getRepos(): Single<List<Repository>> {
         return instance.getMostFamousKotlinRepo()
                 .map {
                     response ->
                     response.items.map {
                         item ->
-                        Repository(ownerUrl = item.owner.avatarUrl,
+                        Repository(ownerImage = item.owner.avatarUrl,
                                 language = item.language,
                                 ownerName = item.owner.login,
                                 repositoryName = item.fullName,
+                                repositoryUrl = item.htmlUrl,
                                 stars = item.stargazersCount,
                                 watching = item.watchers)
                     }
-                }
+                }.toSingle()
     }
 }
