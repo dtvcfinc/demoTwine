@@ -12,6 +12,7 @@ class RepositoryViewModel(val repository: Repository, val context: Context) : Ba
     val ownerImageUrl
         get() = repository.ownerImage
     val repositoryName by lazy { repository.repositoryName }
+    val repositoryUrl by lazy { repository.repositoryUrl }
     val ownerName by lazy { repository.ownerName }
     val starsString by lazy {
         context.getString(R.string.star_format).format(repository.stars)

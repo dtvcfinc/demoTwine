@@ -1,5 +1,6 @@
 package com.dani.demotwine.repo_list
 
+import android.app.ProgressDialog
 import android.net.Uri
 import android.os.Bundle
 import android.support.customtabs.CustomTabsIntent
@@ -30,7 +31,7 @@ class RepoListView : Fragment() {
 
     override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
+        val dialog = ProgressDialog.show(context, null, null)
         GitHub.getRepos()
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe({
@@ -43,8 +44,8 @@ class RepoListView : Fragment() {
                     val adapter = RepoListAdapter(listViewModels,
                             onRepoclick = {
                                 repoViewModel ->
-                                val url = repoViewModel.repository.repositoryUrl
-                                val builder =  CustomTabsIntent.Builder()
+                                val url = repoViewModel.repositoryUrl
+                                val builder = CustomTabsIntent.Builder()
                                 val customTabsIntent = builder.build()
                                 val color = ContextCompat.getColor(context, R.color.colorPrimary)
                                 builder.setToolbarColor(color)
@@ -53,6 +54,11 @@ class RepoListView : Fragment() {
                             }
                     )
                     binding.repoList.adapter = adapter
-                }, ::e)
+                    dialog.dismiss()
+                }, {
+                    error ->
+                    e(error)
+                    dialog.dismiss()
+                })
     }
 }
