@@ -2,13 +2,13 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 //Gets the translations using twine
-//task generateStrings {
-//    String script = 'sh ../getTranslations.sh'
-//    exec {
-//        executable "sh"
-//        args '-c', script
-//    }
-//}
+task generateStrings {
+    String script = 'sh ../getTranslations.sh'
+    exec {
+        executable "sh"
+        args '-c', script
+    }
+}
 
 android {
     compileSdkVersion 25
@@ -52,6 +52,7 @@ dependencies {
     compile 'com.jakewharton.timber:timber:4.5.1'
     compile 'com.squareup.picasso:picasso:2.5.2'
     compile 'com.android.support:customtabs:25.3.1'
+    compile 'com.android.support:design:25.3.1'
     // RX Kotlin
     compile 'io.reactivex:rxkotlin:0.60.0'
     compile 'io.reactivex:rxandroid:1.1.0'

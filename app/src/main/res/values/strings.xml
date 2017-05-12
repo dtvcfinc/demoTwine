@@ -6,7 +6,12 @@
 	<!-- SECTION: Android -->
 	<string name="app_name">Demo twine.</string>
 	<string name="this_is_a_new_string">This is a new string.</string>
-    <string name="repo_name">Repository name</string>
-    <string name="owner_title">Owner</string>
-    <string name="star_format">%s stars</string>
+
+	<!-- SECTION: Repository Strings -->
+	<string name="repo_name">Repository name</string>
+	<string name="owner_title">Owner</string>
+	<string name="star_format">%s stars</string>
+
+	<!-- SECTION: Errors -->
+	<string name="network_error">Network error.</string>
 </resources>
