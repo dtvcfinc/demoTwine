@@ -1,6 +1,5 @@
 package com.dani.demotwine.repositories
 
-import com.dani.demotwine.R.id.stars
 import com.dani.demotwine.models.Repository
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory
